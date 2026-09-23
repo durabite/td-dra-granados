@@ -1,17 +1,326 @@
 ---
+import '../styles/global.css';
 
+const doctorData = {
+  name: "Dra. Martha Granados",
+  title: "Médica Cirujana",
+  experience: "29 Años de Experiencia",
+  cedula: "Cédula Prof. 2695401",
+  certification: "Certificación Vigente por el CONAMEGE",
+  bio: "Médica Cirujana comprometida con una atención profesional, empática y humana. Especializada en descubrir el origen de las enfermedades y brindarte un seguimiento integral.",
+  whatsapp: {
+    number: "5519201638",
+    display: "55 1920 1638",
+    link: "https://wa.me/525519201638?text=Hola%20Dra.%20Martha%20Granados,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20o%20agendar%20una%20consulta."
+  },
+  phone: {
+    display: "55 5741 1115",
+    link: "tel:5557411115"
+  },
+  socials: [
+    {
+      name: "Doctoralia",
+      handle: "Perfil Profesional y Reseñas",
+      url: "https://www.doctoralia.com.mx/perfil/martha-isabel-granados-delgado",
+      type: "doctoralia"
+    },
+    {
+      name: "Facebook",
+      handle: "@Dra.MarthaGranados",
+      url: "https://www.facebook.com/profile.php?id=61592552975327",
+      type: "facebook"
+    },
+    {
+      name: "Instagram",
+      handle: "@dra.marthagranados",
+      url: "https://www.instagram.com/dra.marthagranados/",
+      type: "instagram"
+    }
+  ],
+  event: {
+    badge: "Plática En Vivo",
+    title: "Entendiendo la Tiroiditis de Hashimoto",
+    description: "¿Te sientes exhausto sin razón y tu cuerpo se siente diferente? Acompáñanos a comprender los síntomas, diagnóstico y cómo mejorar tu calidad de vida.",
+    date: "30 de Septiembre, 2026",
+    time: "19:00 hrs",
+    platform: "Google Meet",
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdNIUipK3Mb0bKIA2ge7of_tR6eccg3YMEP0_lFFV3COAdyWQ/viewform"
+  },
+  services: [
+    {
+      title: "Control de Diabetes",
+      desc: "Planes integrales de manejo y seguimiento personalizado para regular tus niveles de glucosa.",
+      icon: "activity"
+    },
+    {
+      title: "Control de Peso y Obesidad",
+      desc: "Tratamientos personalizados y nutrición médica adaptada a tus metas de salud.",
+      icon: "heart"
+    },
+    {
+      title: "Rejuvenecimiento HIFU 25D 360",
+      desc: "Tecnología médica avanzada en aparatología estética para rejuvenecimiento facial y corporal.",
+      icon: "sparkles"
+    },
+    {
+      title: "Medicina de Primer Contacto",
+      desc: "Certificados médicos laborales e internacionales, consulta general y manejo del adulto mayor.",
+      icon: "stethoscope"
+    }
+  ],
+  clinic: {
+    name: "Consultorio Médico Dra. Martha Granados",
+    address: "Tlaxcala 116, Piso 2, Consultorio 9, Col. Roma Sur, C.P. 06760, Alc. Cuauhtémoc, CDMX",
+    schedule: "Lun - Vie: 9:00 a 20:00 hrs (excepto Miér) | Sáb: 12:00 a 18:00 hrs",
+    mapsUrl: "https://maps.google.com/?q=Tlaxcala+116,+Roma+Sur,+Cuauht%C3%A9moc,+06760+Ciudad+de+M%C3%A9xico"
+  }
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Martha Granados | Tarjeta Digital & Contacto</title>
+    <meta name="description" content="Tarjeta digital de la Dra. Martha Granados. Médica Cirujana en CDMX. Especialista en Control de Diabetes, Nutrición, Obesidad, Medicina Estética y Salud del Adulto Mayor." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- OpenGraph / Social Sharing -->
+    <meta property="og:title" content="Dra. Martha Granados | Tarjeta Digital" />
+    <meta property="og:description" content="Médica Cirujana | 29 años de experiencia. Agendar cita por WhatsApp, consulta especialidades y redes sociales." />
+    <meta property="og:image" content="/images/Dra_Martha_Granados.jpg" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <!-- Decorative Ambient Blobs -->
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+
+    <main class="card-container">
+      
+      <!-- 1. Header / Profile Profile -->
+      <section class="profile-header">
+        <div class="avatar-wrapper">
+          <img 
+            src="/images/Dra_Martha_Granados.jpg" 
+            alt="Dra. Martha Granados" 
+            class="avatar-img" 
+            width="130" 
+            height="130" 
+            loading="eager"
+          />
+          <div class="verified-badge" title="Médica Cirujana Certificada">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </div>
+        </div>
+
+        <h1 class="profile-name">{doctorData.name}</h1>
+        <p class="profile-subtitle">{doctorData.title}</p>
+
+        <div class="badges-row">
+          <span class="pill-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {doctorData.experience}
+          </span>
+          <span class="pill-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            {doctorData.cedula}
+          </span>
+        </div>
+
+        <p class="profile-bio">{doctorData.bio}</p>
+      </section>
+
+      <!-- 2. WhatsApp Direct Contact (Primary CTA) -->
+      <a href={doctorData.whatsapp.link} target="_blank" rel="noopener noreferrer" class="whatsapp-cta" id="cta-whatsapp">
+        <div class="whatsapp-left">
+          <div class="whatsapp-icon-bg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="whatsapp-title">Agendar Cita por WhatsApp</div>
+            <div class="whatsapp-sub">Atención personalizada y directa</div>
+          </div>
+        </div>
+        <div class="whatsapp-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- 3. Upcoming Event Featured Card (Plática Tiroiditis de Hashimoto) -->
+      <section class="event-card">
+        <div class="event-header">
+          <span class="event-tag">
+            <span class="live-dot"></span>
+            {doctorData.event.badge}
+          </span>
+          <span class="event-date-chip">📅 {doctorData.event.date}</span>
+        </div>
+
+        <h2 class="event-title">{doctorData.event.title}</h2>
+        <p class="event-desc">{doctorData.event.description}</p>
+
+        <div class="event-details-grid">
+          <div class="event-detail-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Hora: {doctorData.event.time}</span>
+          </div>
+          <div class="event-detail-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+            <span>Vía {doctorData.event.platform}</span>
+          </div>
+        </div>
+
+        <a href={doctorData.event.formUrl} target="_blank" rel="noopener noreferrer" class="event-btn" id="btn-event-register">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+          ¡Inscríbete Gratis Aquí!
+        </a>
+      </section>
+
+      <!-- 4. Social Media Links Stack -->
+      <section>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          Redes Sociales & Perfil
+        </h2>
+        
+        <div class="social-grid">
+          {doctorData.socials.map((social) => (
+            <a 
+              href={social.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class={`social-btn social-btn-${social.type}`}
+              id={`social-${social.type}`}
+            >
+              <div class="social-info">
+                <div class="social-icon">
+                  {social.type === 'doctoralia' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                  )}
+                  {social.type === 'facebook' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  )}
+                  {social.type === 'instagram' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    </svg>
+                  )}
+                </div>
+                <div>
+                  <div>{social.name}</div>
+                  <div style="font-size: 0.78rem; font-weight: 500; opacity: 0.8; font-family: var(--font-body);">{social.handle}</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- 5. Services Offered -->
+      <section class="services-card">
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Servicios y Especialidades
+        </h2>
+
+        <div class="services-grid">
+          {doctorData.services.map((service) => (
+            <div class="service-item">
+              <div class="service-icon-box">
+                {service.icon === 'activity' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                )}
+                {service.icon === 'heart' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                )}
+                {service.icon === 'sparkles' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                )}
+                {service.icon === 'stethoscope' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 0 0 4.5 2h-1a.3.3 0 0 0-.3.3v4.4C3.2 10.4 6 13 9.5 13s6.3-2.6 6.3-6.3V2.3a.3.3 0 0 0-.3-.3h-1a.3.3 0 0 0-.3.3v4.4c0 2.2-1.8 4-4 4s-4-1.8-4-4V2.3Z"/><path d="M9.5 13v7.5a2.5 2.5 0 0 0 5 0V16"/><circle cx="14.5" cy="16" r="2.5"/></svg>
+                )}
+              </div>
+              <div class="service-content">
+                <h3>{service.title}</h3>
+                <p>{service.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- 6. Location & Contact Details -->
+      <section class="info-card">
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ubicación del Consultorio
+        </h2>
+
+        <div class="info-list">
+          <div class="info-row">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>Dirección:</strong>
+              <span>{doctorData.clinic.address}</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>Horarios de Atención:</strong>
+              <span>{doctorData.clinic.schedule}</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>Teléfono del Consultorio:</strong>
+              <span>{doctorData.phone.display}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-buttons-row">
+          <a href={doctorData.clinic.mapsUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary" id="btn-maps">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            Abrir en Maps
+          </a>
+          <a href={doctorData.phone.link} class="btn-secondary" id="btn-call">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Llamar al Consultorio
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer Credits -->
+      <footer class="footer-credits">
+        Hecho con <span>♥️</span> en Sabores & Colores
+      </footer>
+
+    </main>
+  </body>
 </html>
