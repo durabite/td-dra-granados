@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Granados Delgado;Martha;Isabel;Dra.;
+FN:Dra. Martha Granados
+ORG:Consultorio Médico Dra. Martha Granados
+TITLE:Médica Cirujana
+TEL;TYPE=CELL,VOICE,pref:+525519201638
+TEL;TYPE=WORK,VOICE:+525557411115
+ADR;TYPE=WORK,pref:;;Tlaxcala 116\, Piso 2\, Consultorio 9\, Col. Roma Sur;Ciudad de México;CDMX;06760;México
+URL:https://www.doctoralia.com.mx/perfil/martha-isabel-granados-delgado
+NOTE:Médica Cirujana | 29 Años de Experiencia | Cédula Prof. 2695401 | Certificación Vigente por el CONAMEGE
+END:VCARD
