@@ -757,6 +757,19 @@ body {
   margin: 0 2px;
 }
 
+.footer-credits a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--slate-300);
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.footer-credits a:hover {
+  color: var(--blue-600);
+  text-decoration-color: var(--blue-600);
+}
+
 /* Responsive tweaks */
 @media (max-width: 480px) {
   body {
